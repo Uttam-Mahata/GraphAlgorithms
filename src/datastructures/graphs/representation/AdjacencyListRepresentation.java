@@ -1,7 +1,7 @@
 /**
  * 
  */
-package datastructures.graphs;
+package datastructures.graphs.representation;
 
 import java.util.LinkedList;
 import java.util.Queue;

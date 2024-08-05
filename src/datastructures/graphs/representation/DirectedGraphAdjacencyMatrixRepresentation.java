@@ -1,26 +1,21 @@
-package datastructures.graphs;
+package datastructures.graphs.representation;
 
-import java.util.LinkedList;
-
-public class DirectedGraphAdjacencyListRepresentation {
+public class DirectedGraphAdjacencyMatrixRepresentation {
     private int V;
     private int E;
-    private LinkedList<Integer>[] adjList;
+    private int[][] adjMatrix;
 
-    public DirectedGraphAdjacencyListRepresentation(int nodes) {
+    public DirectedGraphAdjacencyMatrixRepresentation(int nodes) {
         this.V = nodes;
         this.E = 0;
         
-        this.adjList = new LinkedList[nodes];
-        for (int v = 0; v < V; v++) {
-            adjList[v] = new LinkedList<>();
-        }
+        this.adjMatrix = new int[nodes][nodes];
     }
 
     // Add edge
     public void addEdge(int from, int to) {
         if (from >= 0 && from < V && to >= 0 && to < V) {
-            adjList[from].add(to);
+            adjMatrix[from][to] = 1;
             E++;
         } else {
             System.out.println("Invalid vertex");
@@ -30,19 +25,18 @@ public class DirectedGraphAdjacencyListRepresentation {
     // Remove edge
     public void removeEdge(int from, int to) {
         if (from >= 0 && from < V && to >= 0 && to < V) {
-            adjList[from].remove((Integer) to);
+            adjMatrix[from][to] = 0;
             E--;
         } else {
             System.out.println("Invalid vertex");
         }
     }
 
-    // Print the adjacency list
+    // Print the adjacency matrix
     public void printGraph() {
-        for (int v = 0; v < V; v++) {
-            System.out.print("Vertex " + v + ":");
-            for (Integer w : adjList[v]) {
-                System.out.print(" -> " + w);
+        for (int i = 0; i < V; i++) {
+            for (int j = 0; j < V; j++) {
+                System.out.print(adjMatrix[i][j] + " ");
             }
             System.out.println();
         }
@@ -50,7 +44,7 @@ public class DirectedGraphAdjacencyListRepresentation {
 
     public static void main(String[] args) {
         int numVertices = 5;
-        DirectedGraphAdjacencyListRepresentation graph = new DirectedGraphAdjacencyListRepresentation(numVertices);
+        DirectedGraphAdjacencyMatrixRepresentation graph = new DirectedGraphAdjacencyMatrixRepresentation(numVertices);
 
         // Adding edges
         graph.addEdge(0, 1);
@@ -61,8 +55,8 @@ public class DirectedGraphAdjacencyListRepresentation {
         graph.addEdge(2, 3);
         graph.addEdge(3, 4);
 
-        // Printing the adjacency list
-        System.out.println("Adjacency List:");
+        // Printing the adjacency matrix
+        System.out.println("Adjacency Matrix:");
         graph.printGraph();
     }
 }

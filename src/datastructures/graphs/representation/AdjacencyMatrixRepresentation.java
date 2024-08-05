@@ -1,7 +1,7 @@
 /**
  * 
  */
-package datastructures.graphs;
+package datastructures.graphs.representation;
 
 /**
  * 
