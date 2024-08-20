@@ -1,4 +1,4 @@
-package datastructures.graphs.representation;
+package uttam.graphalgo.graphs.representation;
 import java.util.ArrayList;
 import java.util.List;
 

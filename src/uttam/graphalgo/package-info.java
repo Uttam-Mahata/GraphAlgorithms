@@ -4,4 +4,4 @@
 /**
  * 
  */
-package datastructures;
+package uttam.graphalgo;

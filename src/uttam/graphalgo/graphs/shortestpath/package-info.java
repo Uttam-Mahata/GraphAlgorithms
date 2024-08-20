@@ -1,1 +1,1 @@
-package datastructures.graphs.shortestpath;
+package uttam.graphalgo.graphs.shortestpath;

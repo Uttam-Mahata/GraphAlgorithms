@@ -1,7 +1,7 @@
 /**
  * 
  */
-package datastructures.graphs.representation;
+package uttam.graphalgo.graphs.representation;
 
 import java.util.LinkedList;
 import java.util.Queue;

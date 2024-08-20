@@ -1,4 +1,4 @@
-package datastructures.graphs.representation;
+package uttam.graphalgo.graphs.representation;
 
 public class DirectedGraphAdjacencyMatrixRepresentation {
     private int V;

@@ -1,1 +1,1 @@
-package datastructures.graphs.representation;
+package uttam.graphalgo.graphs.representation;
